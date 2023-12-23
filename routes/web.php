@@ -25,8 +25,11 @@ Route::controller(NewsController::class)->prefix('admin')->group(function(){
 
      use App\Http\Controllers\Admin\ProfileController;
      Route::controller(ProfileController::class)->prefix('admin')->group(function() { 
-     Route::prefix('Profile')->group(function(){
-        Route::get('','add');
-        Route::get('','edit');
+     Route::prefix('profile')->group(function(){
+        Route::get('create','add');
+        Route::get('edit','edit');
      });
  });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
