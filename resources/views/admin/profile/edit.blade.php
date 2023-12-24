@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Conmpatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title></title>
+        <title>Profile作成</title>
     </head>
     <body>
-        <h1></h1>
+        <h1>MyProfileを作成</h1>
     </body>
 </html>
