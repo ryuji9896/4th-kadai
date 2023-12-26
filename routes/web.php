@@ -26,10 +26,14 @@ Route::controller(NewsController::class)->prefix('admin')->group(function(){
      use App\Http\Controllers\Admin\ProfileController;
      Route::controller(ProfileController::class)->prefix('admin')->group(function() { 
      Route::prefix('profile')->group(function(){
-        Route::get('create','add');
-        Route::get('edit','edit');
+        Route::get('create','add')->middleware('auth');
+        Route::get('edit','edit')->middleware('auth');
      });
  });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
