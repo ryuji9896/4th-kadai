@@ -6,6 +6,14 @@
             <div class="col-md-8 mx-auto">
                 <h3>Myプロフィール</h3>
                 <form action="{{ route('admin.profile.create') }}" method="post" enctype="multipart/form-data">
+                    
+                    @if (count($errors) > 0)
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error}}</li>
+                            @endforeach
+                        </ul>
+                    @endif
                     <div class="form-group row">
                         <label class="col-md-2">氏名</label>
                         <div class="col-md-6">
