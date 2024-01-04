@@ -13,9 +13,9 @@
             <div class="col-md-8">
                 <form action"{{ route('admin.profile.index') }}" method="get">
                     <div class="form-group row">
-                        <label class="col-md-2">ID</label>
+                        <label class="col-md-2">氏名</label>
                         <div class="col-md-8">
-                            <input type="text" class="form-control" name="cond_ID" value="{{ $cond_ID }}">
+                            <input type="text" class="form-control" name="cond_name" value="{{ $cond_name }}">
                         </div>
                         <div class="col-md-2">
                             @csrf
@@ -25,7 +25,7 @@
                 </form>
             </div>
             <div class="row">
-                <div class="list-news col-md-12 mx-auto">
+                <div class="list-profile col-md-12 mx-auto">
                     <div class="row">
                         <table class="table table-dark">
                             <thead>
@@ -38,17 +38,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($posts as $news)
+                                @foreach($posts as $profile)
                                     <tr>
-                                        <th>{{ $news->id }}</th>
-                                        <td>{{ Str::limit($news->title, 100) }}</td>
-                                        <td>{{ Str::limit($news->body, 250) }}</td>
+                                        <th>{{ $profile->name }}</th>
+                                        <td>{{ Str::limit($profile->gender, 100) }}</td>
+                                        <td>{{ Str::limit($profile->hobby, 100) }}</td>
+                                        <td>{{ Str::limit($profile->introduction, 250) }}</td>
                                         <td>
                                             <div>
-                                                <a href="{{ route('admin.news.edit', ['id' => $news->id]) }}">編集</a>
+                                                <a href="{{ route('admin.profile.edit', ['name' => $profile->name]) }}">編集</a>
                                             </div>
                                             <div>
-                                                <a href="{{ route('admin.news.delete', ['id' => $news->id]) }}">削除</a>
+                                                <a href="{{ route('admin.profile.delete', ['name' => $profile->name]) }}">削除</a>
                                             </div>
                                         </td>
                                     </tr>
