@@ -30,7 +30,7 @@ class ProfileController extends Controller
     
     public function edit(Request $request)
     {
-        $profile = Profile::find($request->name);
+        $profile = Profile::find($request->id);
         if(empty($profile)) {
             abort(404);
         }
@@ -40,7 +40,7 @@ class ProfileController extends Controller
     public function update(Request $request)
     {
         $this->validate($request, Profile::$rules);
-        $profile = Profile::find($request->name);
+        $profile = Profile::find($request->id);
         $profile_form = $request->all();
         unset($profile_form['_token']);
         unset($profile_form['remove']);
@@ -61,7 +61,7 @@ class ProfileController extends Controller
     
     public function delete(Request $request)
     {
-        $profile = Profile::find($request->name);
+        $profile = Profile::find($request->id);
         
         $profile->delete();
         

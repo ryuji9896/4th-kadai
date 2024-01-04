@@ -30,26 +30,28 @@
                         <table class="table table-dark">
                             <thead>
                                 <tr>
+                                    <th width"10%">ID</th>
                                     <th width"10%">氏名</th>
                                     <th width"10%">性別</th>
                                     <th width"20%">趣味</th>
-                                    <th width"50%">自己紹介欄</th>
+                                    <th width"40%">自己紹介欄</th>
                                     <th width"10%">操作</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($posts as $profile)
                                     <tr>
+                                         <th>{{ $profile->id }}</th>
                                         <th>{{ $profile->name }}</th>
                                         <td>{{ Str::limit($profile->gender, 100) }}</td>
                                         <td>{{ Str::limit($profile->hobby, 100) }}</td>
                                         <td>{{ Str::limit($profile->introduction, 250) }}</td>
                                         <td>
                                             <div>
-                                                <a href="{{ route('admin.profile.edit', ['name' => $profile->name]) }}">編集</a>
+                                                <a href="{{ route('admin.profile.edit', ['id' => $profile->id]) }}">編集</a>
                                             </div>
                                             <div>
-                                                <a href="{{ route('admin.profile.delete', ['name' => $profile->name]) }}">削除</a>
+                                                <a href="{{ route('admin.profile.delete', ['id' => $profile->id]) }}">削除</a>
                                             </div>
                                         </td>
                                     </tr>

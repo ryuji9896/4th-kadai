@@ -39,7 +39,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-md-12">
-                            <input type="hidden" name="name" value="{{ $profile_form->name }}">
+                            <input type="hidden" name="id" value="{{ $profile_form->id }}">
                             @csrf
                             <input type="submit" class="btn btn-primary" value="更新">
                         </div>
