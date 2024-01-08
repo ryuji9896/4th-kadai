@@ -30,20 +30,18 @@
                         <table class="table table-dark">
                             <thead>
                                 <tr>
-                                    <th width"10%">ID</th>
-                                    <th width"10%">氏名</th>
-                                    <th width"10%">性別</th>
-                                    <th width"20%">趣味</th>
-                                    <th width"40%">自己紹介欄</th>
-                                    <th width"10%">操作</th>
+                                    <th width="20%">氏名</th>
+                                    <th width="10%">性別</th>
+                                    <th width="20%">趣味</th>
+                                    <th width="40%">自己紹介欄</th>
+                                    <th width="10%">操作</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($posts as $profile)
                                     <tr>
-                                         <th>{{ $profile->id }}</th>
                                         <th>{{ $profile->name }}</th>
-                                        <td>{{ Str::limit($profile->gender, 100) }}</td>
+                                        <td>{{ Str::limit($profile->gender, 10) }}</td>
                                         <td>{{ Str::limit($profile->hobby, 100) }}</td>
                                         <td>{{ Str::limit($profile->introduction, 250) }}</td>
                                         <td>
