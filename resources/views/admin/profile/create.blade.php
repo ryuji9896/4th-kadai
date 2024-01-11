@@ -23,7 +23,13 @@
                     <div class="form-group row">
                         <label class="col-md-2">性別</label>
                         <div class="col-md-2">
-                            <input type="text" class="form-control" name="gender" vaule="{{ old('gender') }}">
+                            <input type="radio"  name="gender" value="男">男
+                        </div>
+                        <div class="col-md-2">
+                            <input type="radio"  name="gender" value="女">女
+                        </div>
+                        <div class="col-md-2">
+                            <input type="radio"  name="gender" value="その他">その他
                         </div>
                     </div>
                     <div class="form-group row">
