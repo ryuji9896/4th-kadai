@@ -23,13 +23,16 @@
                     <div class="form-group row">
                         <label class="col-md-2">性別</label>
                         <div class="col-md-2">
-                            <input type="radio"  name="gender" value="男">男
+                            <input type="radio"  class="form-check-input" name="gender" id="gender1" value="男" {{ old('gender') == '男'?'checked' :'' }}>
+                            <label for="gender1" class="form-check-label">男</label>
                         </div>
                         <div class="col-md-2">
-                            <input type="radio"  name="gender" value="女">女
+                            <input type="radio"  class="form-check-input" name="gender" id="gender2"  value="女" {{ old('gender') == '女'?'checked' :'' }}>
+                            <label for="gender2" class="form-check-label">女</label>
                         </div>
                         <div class="col-md-2">
-                            <input type="radio"  name="gender" value="その他">その他
+                            <input type="radio"  class="form-check-input" name="gender" id="gender3"  value="その他" {{ old('gender') == 'その他'?'checked' :'' }}>
+                            <label for="gender3" class="form-check-label">その他</label>
                         </div>
                     </div>
                     <div class="form-group row">
