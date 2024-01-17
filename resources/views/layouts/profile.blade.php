@@ -16,7 +16,7 @@
         <div id="app">
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
-                    <a class-"navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/profile') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target-"#navbarSuppotedContent" aria-controls="navbarSuppotedContent" aria-expanded="false" aria-label="Toggle navigation">

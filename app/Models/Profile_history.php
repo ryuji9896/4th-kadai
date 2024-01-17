@@ -14,5 +14,5 @@ class Profile_history extends Model
     public static $rules = array(
         'profile_id' => 'required',
         'edited_time' => 'required',
-        );
+    );
 }
