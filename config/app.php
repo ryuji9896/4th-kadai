@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'postcreate' => env('APP_postcreate', 'postcreate'),
+'postcreate' => env('APP_postcreate', 'postcreate'),
 
     /*
     |--------------------------------------------------------------------------
@@ -27,9 +27,7 @@ return [
     | services the application utilizes. Set this in your ".env" file.
     |
     */
-
-
-
+    
     'name' => env('APP_NAME', 'Laravel'),
 
     /*
